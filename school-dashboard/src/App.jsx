@@ -7,6 +7,14 @@ import ProfileForm from './components/ProfileForm/ProfileForm'
 import Sidebar from './components/Sidebar/Sidebar'
 
 function App() {
+  const [users, setUsers] = useState([
+    { id: 1, name: 'Amir Mubarek', email: 'amirmub6@.com', role: 'Student' },
+    { id: 2, name: 'Ermi Wak', email: 'ermiwak12@.com', role: 'Instructor' },
+    { id: 3, name: 'Mike Tyson', email: 'mike00@.com', role: 'Admin' },
+  ]);
+  const handleEditClick = (user) => {
+    setSelectedUser(user);
+  };
   return (
     <>
       <Sidebar />
@@ -25,7 +33,7 @@ function App() {
         </section>
         <ProfileCard />
         <ProfileForm />
-        <AdminTable />
+        <AdminTable  users={users} onEdit={handleEditClick} />
     </>
   )
 }
