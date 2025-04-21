@@ -1,5 +1,7 @@
 import './App.css'
 import DashboardCard from './components/Dashboard/Dashboard'
+import ProfileCard from './components/ProfileCard/ProfileCard'
+import ProfileForm from './components/ProfileForm/ProfileForm'
 import Sidebar from './components/Sidebar/Sidebar'
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
             <DashboardCard title="Students Enrolled" value="20" />
           </div>
         </section>
+        <ProfileCard />
+        <ProfileForm />
     </>
   )
 }
