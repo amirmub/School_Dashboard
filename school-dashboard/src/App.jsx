@@ -1,11 +1,12 @@
 import './App.css'
+import { useState } from 'react'
+import AdminTable from './components/AdminTable/AdminTable'
 import DashboardCard from './components/Dashboard/Dashboard'
 import ProfileCard from './components/ProfileCard/ProfileCard'
 import ProfileForm from './components/ProfileForm/ProfileForm'
 import Sidebar from './components/Sidebar/Sidebar'
 
 function App() {
-
   return (
     <>
       <Sidebar />
@@ -24,6 +25,7 @@ function App() {
         </section>
         <ProfileCard />
         <ProfileForm />
+        <AdminTable />
     </>
   )
 }
